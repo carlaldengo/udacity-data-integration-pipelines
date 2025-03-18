@@ -134,7 +134,7 @@
 				"filter1 derive(TotalPaid = RegularGrossPaid+TotalOTPaid+TotalOtherPay) ~> TotalPaid",
 				"TotalPaid aggregate(groupBy(AgencyName,",
 				"          FiscalYear = toInteger(FiscalYear)),",
-				"     TotalPaidSum = toFloat(sum(TotalPaid))) ~> aggregate1",
+				"     TotalPaid = toFloat(sum(TotalPaid))) ~> aggregate1",
 				"aggregate1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
@@ -160,11 +160,6 @@
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     mapColumn(",
-				"          AgencyName,",
-				"          FiscalYear,",
-				"          TotalPaidSum",
-				"     ),",
 				"     partitionBy('hash', 1)) ~> sink2"
 			]
 		}
