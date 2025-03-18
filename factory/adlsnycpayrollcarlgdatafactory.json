@@ -1,0 +1,9 @@
+{
+	"name": "adlsnycpayrollcarlgdatafactory",
+	"location": "westus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "bab87630-76e3-4d2b-a9bf-3e975e3c96c5",
+		"tenantId": "f958e84a-92b8-439f-a62d-4f45996b6d07"
+	}
+}
